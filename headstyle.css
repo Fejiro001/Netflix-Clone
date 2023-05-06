@@ -1,0 +1,195 @@
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --red: rgb(229, 9, 20);
+  --radius: 0.3rem;
+}
+
+body {
+  background-color: rgb(0, 8, 29);
+}
+
+.body {
+  background-image: linear-gradient(90deg, rgba(0, 8, 29, 0.9) 30%, rgba(0, 8, 29, 0.315)), url('background.jpg');
+  background-size: cover cover;
+  /* background-position: center center; */
+  background-repeat: no-repeat;
+  height: 50rem;
+  width: 100%;
+}
+
+.heading {
+  height: inherit;
+  padding: 0 2rem;
+}
+
+header {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1.5rem 0;
+}
+
+#logo-body {
+  height: fit-content;
+}
+
+#logo {
+  width: 9rem;
+}
+
+#signin-body {
+  height: fit-content;
+}
+
+#signin {
+  background-color: var(--red);
+  border: none;
+  border-radius: var(--radius);
+  width: 5rem;
+  height: fit-content;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+#getstarted {
+  padding: 3rem 1rem 0;
+}
+
+#getstarted h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  max-width: 85%;
+}
+
+#getstarted h3 {
+  padding: 1rem 0;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+
+#enter-email {
+  padding-top: 1rem;
+}
+
+#enter-email p {
+  font-size: 1.3rem;
+}
+
+#inputemail {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+#inputemail input {
+  background-color: rgba(20, 20, 20, 0.616);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  border: 0.1rem solid #696969;
+  min-width: 25vw;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#inputemail button {
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: var(--radius);
+  width: 12rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+#inputemail button:hover, #signin:hover {
+  background-color: rgb(206, 9, 19);
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  margin-top: 10rem;
+  /* border: 0.5rem solid black; */
+  width: 100%;
+}
+
+.perks {
+  flex: 1;
+  border: 0.2rem solid red;
+  padding: 2.8rem 1.5rem 4.8rem;
+  width: 100%;
+  
+  /* max-width: 25%; */
+}
+
+.perks img {
+  width: 100px;
+}
+
+.perks h1 {
+  padding: 1rem 0;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 960px) {
+  #logo {
+    width: 6rem;
+  }
+
+  .heading {
+    padding: 0 1.5rem;
+  }
+
+  #getstarted h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #getstarted h1 {
+    font-size: 3rem;
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .perks {
+    max-width: 50%;
+    flex: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #inputemail {
+    flex-direction: column;
+  }
+  #inputemail button {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .perks {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
